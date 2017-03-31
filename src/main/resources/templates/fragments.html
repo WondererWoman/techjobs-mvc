@@ -27,5 +27,18 @@
         </div>
     </div>
 
+    <div th:fragment="job-list">
+        <form method="post">
+            <div th:if="${jobs != null}">
+                <table th:each=" job : ${jobs}" style="width: 600px; border-bottom: thick solid #303030;">
+                    <tr th:each="item : ${job}">
+                        <td th:text="${item.key}" style="width: 250px; text-transform: capitalize;"></td>
+                        <td th:text="${item.value}"></td>
+
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

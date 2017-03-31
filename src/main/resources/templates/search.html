@@ -2,11 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
 </head>
-<body>
 
 <div th:replace="fragments :: page-header"></div>
 
-<div class="container body-content">
+<body class="container body-content">
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
@@ -38,7 +37,7 @@
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
 
-</div>
+    <div th:replace="fragments :: job-list"></div>
 
 </body>
 </html>
